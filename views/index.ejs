@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+</head>
+<body>
+    <div style="display: flex; align-items: center; width: 50%; justify-content: space-around;">
+        <h1>Message Board</h1>
+        <button><a href="/new">New message</a></button>
+    </div>
+    <% messages.forEach(messages => { %>
+        <div style="background-color: #0002;">
+            <h3><%= messages.username %></h3>
+            <p><%= messages.message %></p>
+            <p><%= messages.added %></p>
+            <button><a href="<%= messages.id %>">View details</a></button>
+        </div>
+    <% }) %>
+</body>
+</html>
